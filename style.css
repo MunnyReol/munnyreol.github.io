@@ -1,31 +1,50 @@
+body{
+    font-family: 'Merriweather';
+    color:blue;
+    display:absolute;
+    background-color:#031205;
+
+}
+
 .title{
-    border-radius: 20px;
-    border: 2px solid red;
-    box-shadow: 0 0 20px #666;
-    text-align:center;
-    margin-left: 25%;
-    width: 100px; 
-    font-size:500%;
-    display: inline; 
-    background-color:green;
+font-size:100px;
+text-align:center;
+color:blue;
+border-radius:100px;
+border:2px solid blue;
+box-shadow:0 0 27px blue;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 .song{
-    background-color:orange;
-    border-radius: 8px;
-    border:2px dashed red ;
-    box-shadow: 0 0 20px #666;
+display:block;
+    font-size:40px;
+    display:block ;
+    margin-left:auto;
+    margin-right:auto;
     text-align:center;
-    margin-left: 5%;
-    width: 100px; 
-    font-size:200%;
-    display: inline; 
-    margin-top:350px;
+    width:350px;
+    color:green;
+    border:2px dashed blue;
+    box-shadow:0 0 5px blue;
+    border-radius:100px;
 }
 .hr{
     border:5px solid red;
+    text-align: center;
+    font-size:50px;
+    color: green;
+    border-radius: 100px;
+    box-shadow: 0 0 5px blue;
 }
-.yt{
-    font-size:200%;
-    color:red;
-    margin-left:5%;
+hr{
+   height:20px;
+    border:2px dotted blue;
+    border-radius:100px;
+    box-shadow:0 0 5px red;
+}
+a{
+text-decoration: none;
+color: green;
 }
