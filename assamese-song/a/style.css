@@ -1,0 +1,70 @@
+body {
+    font-family: 'Merriweather';
+    color:blue;
+    display:absolute;
+    background-color:green;
+}
+page{
+display:block;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+border-radius:100px;
+border:2px solid blue;
+box-shadow:0 0 27px blue;
+background-color: black;
+    
+}
+
+.title
+{
+font-size:100px;
+text-align:center;
+color:blue;
+border-radius:100px;
+border:2px solid blue;
+box-shadow:0 0 27px blue;
+display: block;
+margin-left: auto;
+margin-right: auto;
+background-color: black;
+
+}
+.song{
+    display:block ;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width:300px;
+    color:green;
+    border:2px dashed blue;
+    box-shadow:0 0 5px blue;
+    border-radius:100px;
+    font-size:40px;
+    background-color: black;
+}
+
+.hr{
+    height:20px;
+    border:2px dotted green;
+    border-radius:100px;
+    box-shadow:0 0 5px red;
+    background-color: #737381;
+}
+
+
+a{
+text-decoration: none;
+color: green;
+}
+form{
+text-align:left;
+color:blue;
+border-radius:50px;
+border:2px solid blue;
+box-shadow:0 0 27px blue;
+background-color: white;
+}
+hr{
+    border:0.5px dotted green;
+}
