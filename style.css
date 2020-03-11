@@ -16,6 +16,7 @@ box-shadow:0 0 27px blue;
 display: block;
 margin-left: auto;
 margin-right: auto;
+background-color: black;
 }
 .song{
 display:block;
@@ -37,6 +38,7 @@ display:block;
     color: green;
     border-radius: 100px;
     box-shadow: 0 0 5px blue;
+    background-color: black;
 }
 hr{
    height:20px;
@@ -46,5 +48,5 @@ hr{
 }
 a{
 text-decoration: none;
-color: green;
+
 }
