@@ -15,7 +15,7 @@ $.getJSON("https://api.thesocialcounter.com/twitter/?name="+id, function (data) 
         $(".title").text(title);
         $("#odometer").text(flwr);
         
-        console.log("Flower="+flwr+"\n","Friends="+frnds)
+        console.log("Flower="+flwr)
         
          var image = document.querySelector('#user_pic'); image.src = pic;
           var image = document.querySelector('#bckgrnd'); image.src = bckgrnd;
