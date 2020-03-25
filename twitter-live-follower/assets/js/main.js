@@ -21,6 +21,6 @@ $.getJSON("https://api.thesocialcounter.com/twitter/?name="+id, function (data) 
           var image = document.querySelector('#bckgrnd'); image.src = bckgrnd;
          
         })
-        }, 2000); 
+        }, 2500); 
     });
 });
