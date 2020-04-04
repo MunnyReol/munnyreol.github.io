@@ -11,12 +11,18 @@ $.getJSON("https://api.thesocialcounter.com/twitter/?name="+id, function (data) 
         title=data.name;
         pic=data.profile_image_url;
         bckgrnd=data.profile_banner_url;
+var url = pic; 
+var a = url.indexOf("_normal"); 
+var b = url.substring(a); 
+var c = url.replace(b,""); 
+url = c;
+hd=(url+".jpg")
         
         $(".title").text(title);
         $("#odometer").text(flwr);
         
         
-         var image = document.querySelector('#user_pic'); image.src = pic;
+         var image = document.querySelector('#user_pic'); image.src = hd;
           var image = document.querySelector('#bckgrnd'); image.src = bckgrnd;
          
         })
@@ -34,12 +40,18 @@ $.getJSON("https://api.thesocialcounter.com/twitter/?name="+id, function (data) 
         title=data.name;
         pic=data.profile_image_url;
         bckgrnd=data.profile_banner_url;
+var url = pic; 
+var a = url.indexOf("_normal"); 
+var b = url.substring(a); 
+var c = url.replace(b,""); 
+url = c;
+hd=(url+".jpg")
         
         $(".title").text(title);
         $("#odometer").text(flwr);
         
         
-         var image = document.querySelector('#user_pic'); image.src = pic;
+         var image = document.querySelector('#user_pic'); image.src = hd;
           var image = document.querySelector('#bckgrnd'); image.src = bckgrnd;
          
         })
