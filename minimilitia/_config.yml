@@ -1,1 +1,2 @@
-Wait a second
+plugins:
+  - jekyll-sitemap
