@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>try to extrack html element by get request</title>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+<div>Confirmed</div>
+<div class="result">0</div>
+</body>
+<script>
+            $.get(
+            "https://munnyreol.github.io/get/file.html", function(data) {
+                var date1 = $(data).find('a.input.popsok')
+                
+                var confirmed = $(date1).text()
+                
+                  $(".result").text(confirmed);
+                  
+                  console.log("result="+confirmed)
+
+})
+</script>
+</html>
