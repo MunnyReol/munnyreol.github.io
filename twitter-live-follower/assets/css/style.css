@@ -1,4 +1,7 @@
-body{background-color:#eff4f8}
+body{
+   min-height: 100vh;
+ background-image: linear-gradient(120deg,#00FF1E,#003EFF);
+}
 .odometer{color:#455a64
 }
 .box-text{
