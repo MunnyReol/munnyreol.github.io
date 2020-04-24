@@ -5,8 +5,8 @@ if(id="0"){
     id=idd
 }
 setInterval(function() {
-$.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name="+id, function (data) {
-
+$.getJSON("https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name="+id, function (data) {
+/*https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name=*/
         flwr = data.followers_count;
         title=data.name;
         pic=data.profile_image_url;
@@ -34,8 +34,8 @@ var idd= id
 id=prompt("Enter your favorite Twitter channel Name",getRandomName())
 
 setInterval(function() {
-$.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name="+id, function (data) {
-
+$.getJSON("https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name="+id, function (data) {
+/*https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name=*/
         flwr = data.followers_count;
         title=data.name;
         pic=data.profile_image_url;
