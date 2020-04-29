@@ -1,8 +1,8 @@
-$(document ).ready(function (){
-if(id="0"){
-    id="BarackObama"
-} else{
-    id=idd
+const params = new URLSearchParams(window.location.search)
+
+id = params.get('user')
+if(id ==null){
+id="BarackObama"
 }
 setInterval(function() {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name="+id, function (data) {
@@ -35,7 +35,7 @@ id=prompt("Enter your favorite Twitter channel Name",getRandomName())
 
 setInterval(function() {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name="+id, function (data) {
-/*https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name=*/
+
         flwr = data.followers_count;
         title=data.name;
         pic=data.profile_image_url;
@@ -57,4 +57,3 @@ hd=(url+".jpg")
         })
         }, 2500); 
     });
-});
