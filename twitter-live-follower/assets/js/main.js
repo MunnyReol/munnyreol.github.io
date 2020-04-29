@@ -33,6 +33,8 @@ function getRandomName() { var names = [ "munnyreol", "BarackObama","JustinBiebe
 var idd= id
 id=prompt("Enter your favorite Twitter channel Name",getRandomName())
 
+window.location.href = "/twitter-live-follower/?user="+id
+
 setInterval(function() {
 $.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name="+id, function (data) {
 
