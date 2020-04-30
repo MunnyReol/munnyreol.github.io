@@ -12,12 +12,8 @@ $.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/t
         title=data.name;
         pic=data.profile_image_url;
         bckgrnd=data.profile_banner_url;
-var url = pic; 
-var a = url.indexOf("_normal"); 
-var b = url.substring(a); 
-var c = url.replace(b,""); 
-url = c;
-hd=(url+".jpg")
+
+var hd = pic.replace(/_normal/gi, "");
         
         $(".title").text(title);
         $("#odometer").text(flwr);
