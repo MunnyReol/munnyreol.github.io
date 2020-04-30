@@ -32,8 +32,8 @@ hd=(url+".jpg")
 $.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name="+id, function (data) {
         flwr = data.followers_count;
         $("#odometer").text(flwr);
-        }, 2500); 
-         })
+        }); 
+         }, 2500)
 
 $("button").click(function (){
 function getRandomName() {
