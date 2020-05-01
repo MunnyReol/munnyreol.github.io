@@ -1,1 +1,19 @@
-{"name":"cors-anywhere","version":"0.4.1","description":"CORS Anywhere is a reverse proxy which adds CORS headers to the proxied request. Request URL is taken from the path","license":"MIT","author":"Rob Wu \u003crob@robwu.nl\u003e","repository":{"type":"git","url":"\"https://github.com/MunnyReol/munnyreol.github.io\""},"bugs":{"url":"https://github.com/Rob--W/cors-anywhere/issues/","email":"rob@robwu.nl"},"keywords":["cors","cross-domain","http-proxy","proxy","heroku"],"main":"index.html","files":["twitter-live-follower/","twitter-live-follower/assets/","munnyreol.png","style.css","index.html","google6727c00391863d04.html","_config.yml","404.html","twitter-live-follower/assets/js/","twitter-live-follower/assets/css/","twitter-live-follower/assets/img/","mini_militia/","google/","get/","assamese-song/"],"devDependencies":{"eslint":"^2.2.0"},"scripts":{"lint":"eslint ."},"engines":{"node":"\u003e\u003d0.10.0"}}
+{
+  "name": "munnyreol",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.php"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "^4.1.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1"
+  }
+}
