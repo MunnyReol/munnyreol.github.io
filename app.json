@@ -2,10 +2,10 @@
   "name": "munnyreol.github.io",
     "version": "1.0.0",
     "description": "XploitSPY - Remote Android Spying Tool",
-    "main": "index.js",
+    "main": "index.php",
     "scripts": {
-        "start": "node server/index.php",
-        "test": "node server/index.php"},
+        "start": "node index.php",
+        "test": "node index.php"},
   "author": "MunnyReol",
     "license": "ISC",
     "dependencies": {
