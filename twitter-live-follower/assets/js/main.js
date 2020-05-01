@@ -6,7 +6,7 @@ id="BarackObama"
 window.location.href = "?user="+id
 }
 
-$.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name="+id, function (data) {
+$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+id, function (data) {
 /*https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name=*/
         flwr = data.followers_count;
         title=data.name;
@@ -25,7 +25,7 @@ var hd = pic.replace(/_normal/gi, "");
         })
 
        setInterval(function() {
-$.getJSON("https://cors-anywhere.herokuapp.com/https://mlmcounts.herokuapp.com/twitter/api/?name="+id, function (data) {
+$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+id, function (data) {
         flwr = data.followers_count;
         $("#odometer").text(flwr);
         }); 
