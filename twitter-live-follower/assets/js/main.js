@@ -5,9 +5,9 @@ if(id ==null){
 id="BarackObama"
 window.location.href = "?user="+id
 }
-//replaceid= id.replace(/%20/gi, "");
+replaceid= id.replace(/%20/gi, "");
 
-$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+/*replace*/id, function (data) {
+$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+replaceid, function (data) {
 /*https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name=*/
         flwr = data.followers_count;
         title=data.name;
@@ -26,7 +26,7 @@ var hd = pic.replace(/_normal/gi, "");
         })
 
        setInterval(function() {
-$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+/*replace*/id, function (data) {
+$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+replaceid, function (data) {
         flwr = data.followers_count;
         $("#odometer").text(flwr);
         }); 
