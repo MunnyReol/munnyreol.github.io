@@ -5,7 +5,7 @@ if(id ==null){
 id="BarackObama"
 window.location.href = "?user="+id
 }
-var replaceid= id.replace("%20", "Z");
+const replaceid= id.replace("%20", "Z");
 
 $.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+replaceid, function (data) {
 /*https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name=*/
