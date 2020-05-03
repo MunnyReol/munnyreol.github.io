@@ -5,29 +5,27 @@ if(id ==null){
 id="BarackObama"
 window.location.href = "?user="+id
 }
-const replaceid= id.replace("%20", "Z");
+//replaceid= id.replace(/%20/gi, "");
 
-$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+replaceid, function (data) {
+$.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
 /*https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name=*/
-        flwr = data.followers_count;
+        flwr = data.followers;
         title=data.name;
-        pic=data.profile_image_url;
-        bckgrnd=data.profile_banner_url;
+        pic=data.profile_image;
+        bckgrnd=data.banner;
 
-var hd = pic.replace(/_normal/gi, "");
-        
         $(".title").text(title);
         $("#odometer").text(flwr);
         
         
-         var image = document.querySelector('#user_pic'); image.src = hd;
+         var image = document.querySelector('#user_pic'); image.src = pic;
           var image = document.querySelector('#bckgrnd'); image.src = bckgrnd;
          
         })
 
        setInterval(function() {
-$.getJSON("https://cors-munnyreol.herokuapp.com/https://munnyreol-live.herokuapp.com/twitter/api/?name="+replaceid, function (data) {
-        flwr = data.followers_count;
+$.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
+        flwr = data.followers;
         $("#odometer").text(flwr);
         }); 
          }, 2500)
