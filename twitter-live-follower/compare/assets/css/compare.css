@@ -4,11 +4,14 @@ body{
 }
 .div-first{
 background-color: #D7DBFF;
-display: inline-block;
+/*display: inline-block;*/
+display: absolute;
 width: 450px;
 margin-left: 5px;
 color: #000000;
 height: 550px;
+border-radius: 10px;
+box-shadow: 0 0 25px #000000;
 
 }
 .odometer{
@@ -28,6 +31,8 @@ height: 225px;
 margin-top: -20%;
 border-radius: 100%;
 box-shadow: 0 0 50px #000000; 
+border: 2px solid blue;
+
 }
 .title{
 text-align: center;
@@ -37,13 +42,15 @@ text-align: center;
 }
 .second-div-first{
 background-color: #D7DBFF;
-display: inline-block;
+display: absolute;
 width: 450px;
 margin-right: 5px;
-margin-top: -550px;
+margin-top: -570px;
 color: #000000;
 height: 550px;
 float: right;
+border-radius: 10px;
+box-shadow: 0 0 25px #000000;
 }
 .logo2{
 margin-left: auto;
@@ -62,6 +69,12 @@ color: #000000;
 margin-top: 20px;
 margin-left: auto;
 margin-right: auto;
+border-radius: 10px;
+box-shadow: 0 0 25px #000000;
+}
+.banner{
+border-radius: 10px;
+box-shadow: 0 0 20px #000000;
 }
 .title2{
 text-align: center;
@@ -69,7 +82,3 @@ text-align: center;
 .defferent{
 text-align: center;
 }
-
-
-
-
