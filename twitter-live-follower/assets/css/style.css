@@ -58,3 +58,10 @@ button{
 button:hover {
 opacity: 1
 }
+#chart{
+color: red;
+width: 100%;
+height: 500px;
+border: red 2px dotted;
+background-color:black;
+}
