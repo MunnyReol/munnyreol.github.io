@@ -8,6 +8,73 @@ id2 = "iamsrk"
 window.location.href = "?user1="+id+"&user2="+id2
 }
 
+
+
+
+
+var lineColor = "red"
+var textBright = "red"
+$(function asd(){
+    
+var chart = new Highcharts.chart({
+              chart: {
+                  renderTo: 'chart',
+                  type: 'spline',
+                    zoomType: 'x',
+                    backgroundColor: 'transparent',
+                    plotBorderColor: 'transparent'
+              },
+              title: {
+                  text: 'Live Chart HighChart'
+              },
+              xAxis: {
+                  type: 'datetime',
+                  tickPixelInterval: 200,
+                    gridLineColor: lineColor,
+                    labels: {
+                        style: {
+                            color: textBright
+                        }
+                    },
+                    lineColor: lineColor,
+                    minorGridLineColor: 'red',
+                    tickColor: lineColor,
+                    title: {
+                        style: {
+                            color: textBright
+                        }
+                    }
+              },
+              yAxis: {
+                  title: {
+                      text: ''
+                  },
+                    gridLineColor: lineColor,
+                    labels: {
+                        style: {
+                            color: textBright
+                        }
+                    },
+                    lineColor: lineColor,
+                    minorGridLineColor: 'red',
+                    tickColor: lineColor
+              },
+              credits: {
+                  enabled: false
+              },
+
+              series: [{
+                 name: 'Followers',
+                marker: { enabled: false },
+                color: '#17D92D',
+                lineColor: '#DA1DAF'
+              }]
+            });
+
+
+
+
+
 /*var id ="Barack Obama"*/
 $.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
 /*https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name=*/
@@ -23,7 +90,6 @@ $.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/t
          var image = document.querySelector('#user_pic'); image.src = pic;
           var image = document.querySelector('#bckgrnd'); image.src = bckgrnd;
          
-        })
         
         
         
@@ -41,7 +107,24 @@ $.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/t
         
          var image = document.querySelector('#user_pics'); image.src = pics;
           var image = document.querySelector('#backgrnd'); image.src = backgrnd;
-         
+
+
+if (flwr >folower)
+        {
+        defferent = flwr - folower 
+         $("#defferent").text(defferent);
+         } else {
+         defferent =  folower - flwr
+          $("#defferent").text(defferent);
+         }
+
+chart.series[0].addPoint([                   
+                (new Date()).getTime(),
+                Math.abs(defferent)
+                ])
+
+
+        })
         })
 
        setInterval(function() {
@@ -60,9 +143,18 @@ $.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/t
          defferent = flwr- folower
           $("#defferent").text(defferent); 
          }
+
+
+chart.series[0].addPoint([                   
+                (new Date()).getTime(),
+                Math.abs(defferent)
+                ])
+
+
         }); 
         }); 
          }, 2500)
+})
 
 $("button").click(function (){
 function getRandomName() {
