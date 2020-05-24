@@ -1,7 +1,14 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
 body{
    min-height: 100vh;
  background-image: linear-gradient(120deg,#00FF1E,#003EFF);
 }
+
 .div-first{
 background-color: #D7DBFF;
 /*display: inline-block;*/
