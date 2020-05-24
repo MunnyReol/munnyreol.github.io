@@ -25,7 +25,7 @@ var chart = new Highcharts.chart({
                     plotBorderColor: 'transparent'
               },
               title: {
-                  text: 'Live Chart HighChart'
+                  text: 'Twitter Live Follower Count Chart'
               },
               xAxis: {
                   type: 'datetime',
