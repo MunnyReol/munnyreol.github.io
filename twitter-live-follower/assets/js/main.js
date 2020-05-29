@@ -6,10 +6,6 @@ id="BarackObama"
 window.location.href = "?user="+id
 }
 
-
-
-
-
 var lineColor = "red"
 var textBright = "red"
 $(function asd(){
@@ -109,19 +105,16 @@ chart.series[0].addPoint([
          }, 2500)
 })
 
-$("button").click(function (){
-function getRandomName() {
- var names = [ "munnyreol", "BarackObama","JustinBieber", "AmitabhBachan", "iamsrk"];
- return names[Math.floor(Math.random() * names.length)];
-} 
+function val(){
+idd = document .getElementById("name").value;
 
-id=prompt("Enter your favorite Twitter channel Name",getRandomName())
-
-if (id.length == 0) {
-    alert("Invalid Username!")
+if (idd.length !== 0) {
+window.location.href = "?user="+idd
+    
   } else {
-window.location.href = "?user="+id
+alert("Invalid Username!")
    /* window.location.href = "/twitter-live-follower/?user="+id*/
-  }
+/*  }*/
+}
+    };
 
-    });
