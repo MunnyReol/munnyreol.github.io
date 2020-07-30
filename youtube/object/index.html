@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/png" href="../../assets/img/minimilitia.png" />
+<title>YouTube</title>
 
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159650452-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159650452-1');
+</script>
+</head>
+<body link="blue"  vlink="blue" aink="red">
+<p></p>
+<!-- Button trigger modal -->
+<div class="text-center">
+<button type="button" class="btn text-center  btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+  Search
+</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">What You Want</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+<div class="input-group flex-nowrap">
+<input type="text" placeholder="Enter YouTube Video Id" aria-describedby="inputGroup-sizing-default" class="changeuser-search form-control" id="input-text">
+</div>
+<div class="channel-list" id="show">
+</div>
+
+</div>      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="submit()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+<div class="container text-center text-primary">
+<div class="embed-responsive embed-responsive-16by9">
+    <object id = "yt_url"class="embed-responsive-item"
+data="https://www.youtube.com/embed/il_t1WVLNxk" frameborder="0" allowfullscreen> 
+</object>
+
+</div>
+</div>
+</body>
+<script>
+
+const params = new URLSearchParams(window.location.search)
+
+url = params.get('id')
+
+url2 = new URL(url)
+
+const params2 = new URLSearchParams(url2.search)
+
+video_url = params2.get('v')
+
+
+lngt = video_url.length
+
+if(lngt>0){
+
+} else {
+video_url = url
+}
+
+if(lngt>0){
+
+} else{
+video_url = "0wgIHEe-vC4"
+}
+
+document.querySelector('#yt_url').src = "https://www.youtube.com/embed/"+video_url;
+
+function submit(){
+video_url = document.getElementById("input-text").value
+
+window.location.href = "?id="+video_url
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
