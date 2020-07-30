@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" type="image/png" href="../../assets/img/minimilitia.png" />
+<link rel="shortcut icon" type="image/png" href="https://munnyreol.netlify.app/munnyreol.png" />
 <title>YouTube</title>
 
 <meta charset="utf-8">
@@ -20,6 +20,13 @@
 </script>
 </head>
 <body link="blue"  vlink="blue" aink="red">
+
+<nav class="border-bottom sticky-top navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand text-primary">
+<img src="https://munnyreol.netlify.app/munnyreol.png" width="30" height="30" class="d-inline-block align-top" alt=""> 
+This Idia Provided By Munny Reol 🤔
+</a>
+</nav>
 <p></p>
 <!-- Button trigger modal -->
 <div class="text-center">
@@ -69,8 +76,11 @@ video_url = "0wgIHEe-vC4"
 
 function submit(){
 video_url = document.getElementById("input-text").value
-
+if(video_url.length>0){
+    
 document.querySelector('#yt_url').data = "https://www.youtube.com/embed/"+video_url;
+
+}
 }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
