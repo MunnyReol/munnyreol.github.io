@@ -56,16 +56,31 @@
 <p></p>
 <div class="container text-center text-primary">
 <div class="embed-responsive embed-responsive-16by9">
-    <iframe  id = "yt_url"class="embed-responsive-item" src="https://www.youtube.com/embed/0wgIHEe-vC4" frameborder="0" allowfullscreen></iframe>
+   
 </div>
 </div>
+ <iframe  id = "yt_url"class="embed-responsive-item" src="https://www.youtube.com/embed/0wgIHEe-vC4" frameborder="0" allowfullscreen></iframe>
 </body>
 <script>
 
 const params = new URLSearchParams(window.location.search)
 
-video_url = params.get('id').replace("https://youtu.be/", "").replace("https://m.youtube.com/watch?v=", "").replace("https://youtube.com/watch?v=", "")
+url = params.get('id')
+
+url2 = new URL(url)
+
+const params2 = new URLSearchParams(url2.search)
+
+video_url = params2.get('v')
+
+
 lngt = video_url.length
+
+if(lngt>0){
+
+} else {
+video_url = url
+}
 
 if(lngt>0){
 
