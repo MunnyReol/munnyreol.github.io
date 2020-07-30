@@ -67,13 +67,15 @@ data="https://www.youtube.com/embed/il_t1WVLNxk" frameborder="0" allowfullscreen
 
 const params = new URLSearchParams(window.location.search)
 
-url = params.get('id')
+//url = params.get('id')
 
-url2 = new URL(url)
+video_url = params.get("id")
 
-const params2 = new URLSearchParams(url2.search)
+//url2 = new URL(url)
 
-video_url = params2.get('v')
+//const params2 = new URLSearchParams(url2.search)
+
+//video_url = params2.get('v')
 
 
 lngt = video_url.length
