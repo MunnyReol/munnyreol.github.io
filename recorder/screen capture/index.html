@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+<title>Screen Capture</title>
+</head>
+<body>
+<style>
+*{
+font-size: 50px;
+}
+#video{
+border: 2px solid red;
+width: 50%;
+
+}
+</style>
+<video id="video" autoplay controls></video>
+<br>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="check">Check</button>
+<script>
+
+var check =document.getElementById("check")
+
+const videoElement = document.getElementById("video");
+const log = document.getElementById("log");
+const star = document.getElementById("start");
+const stop = document.getElementById("stop");
+
+// Options for getDisplayMedia()
+
+var displayMediaOptions = {
+  video: {
+    cursor: "always"
+  },
+  audio: true
+};
+
+
+// Set event listeners for the start and stop buttons
+start.addEventListener("click", function(e) {
+  startCapture();
+}, false);
+
+stop.addEventListener("click", function(e) {
+  stopCapture();
+}, false);
+
+
+async function startCapture() {
+
+  try {
+    videoElement.srcObject = await navigator.mediaDevices.getUserMedia(displayMediaOptions);
+/*
+videoElement.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+*/
+  } catch(err) {
+    console.error("Error: " + err);
+    alert ( err);
+  }
+}
+
+function stopCapture(e){
+
+let tracks = videoElement.srcObject.getTracks();
+tracks.forEach( track => track.stop())
+videoElement.srcObject = null
+}
+
+
+
+
+check.addEventListener("click", function(e) {
+  alert ("working")
+});
+</script>
+</body>
+
+</html>
