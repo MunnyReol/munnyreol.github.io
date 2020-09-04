@@ -71,7 +71,7 @@ var chart = new Highcharts.chart({
 
 
 
-$.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
+$.getJSON("https://cors-anywhere.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
 /*https://cors-anywhere.herokuapp.com/https://api.thesocialcounter.com/twitter/?name=*/
         flwr = data.followers;
         title=data.name;
@@ -93,7 +93,7 @@ chart.series[0].addPoint([
         })
 
        setInterval(function() {
-$.getJSON("https://cors-munnyreol.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
+$.getJSON("https://cors-anywhere.herokuapp.com/http://munnyreol.herokuapp.com/twitter/api/?user="+/*replace*/id, function (data) {
         flwr = data.followers;
         $("#odometer").text(flwr);
 
