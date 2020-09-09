@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Instagram API for google crawling</title>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+<body>
+
+<div class="row" id="show"></div>
+
+</body>
+<script src="script.js"></script>
+<script>
+    $.getJSON("https://www.instagram.com/iamsrk/?__a=1", function (data) {
+
+    name = data.graphql.user.full_name;
+    
+    user = data.graphql.user.username;
+    
+    follower = data.graphql.user.edge_followed_by.count;
+    
+    following = data.graphql .user .edge_follow.count;
+    
+    pic = data .graphql .user .profile_pic_url_hd;
+    
+    var btn = document.createElement("div");
+      
+  document.getElementById("show").appendChild(btn);
+  btn.innerHTML = name+" "+user+" "+follower+" "+following+" "+pic
+   
+    console.log(name)
+    console .log(user )
+    
+    console .log(follower )
+    
+    console .log(following)
+    
+    console .log(pic)
+  
+})
+
+</script>
+</html>
