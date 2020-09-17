@@ -13,7 +13,7 @@
             "https://munnyreol.github.io/get/file.html", function(data) {
                 var date1 = $(data).find('a.input.popsok')
                 
-                var confirmed = $(date1).text()
+                var confirmed = $(date1).attr('href')
                 
                   $(".result").text(confirmed);
                   
