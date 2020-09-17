@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>try to extrack html element by get request</title>
+<title>Mediafire Download Link</title>
 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
 </head>
 <body>
-<div>Confirmed</div>
-<div class="result">0</div>
+<div>
+<div class="mediafire" id="mediafire">mediafire</div>
 </body>
 <script>
             $.get(
-            "https://cors-anywhere.herokuapp.com/http://www.mediafire.com/file/ozwriw6lwj7ym3g/MM_5.2.1_WALLHACKED.apk/file", function(data) {
+            "https://cors-anywhere.herokuapp.com/http://www.mediafire.com/file/ozwriw6lwj7ym3g", function(data) {
                 var date1 = $(data).find('a.input.popsok')
-                
                 var confirmed = $(date1).attr('href')
-                
-                  $(".result").text(confirmed);
-                  
+            
+                  $(".mediafire").text(confirmed);
                   console.log("result="+confirmed)
-
+         
 })
 </script>
+
 </html>
