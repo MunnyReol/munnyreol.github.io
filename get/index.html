@@ -10,8 +10,17 @@
 <div class="mediafire" id="mediafire">mediafire</div>
 </body>
 <script>
+
+const params = new URLSearchParams(window.location.search)
+
+m_id = params.get('id')
+
+if(m_id ==null || m_id.length == 0){
+m_id ="ozwriw6lwj7ym3g"
+}
+
             $.get(
-            "https://cors-anywhere.herokuapp.com/http://www.mediafire.com/file/ozwriw6lwj7ym3g", function(data) {
+            "https://cors-anywhere.herokuapp.com/http://www.mediafire.com/file/"+m_id, function(data) {
                 var date1 = $(data).find('a.input.popsok')
                 var confirmed = $(date1).attr('href')
             
