@@ -1,0 +1,35 @@
+<script>
+
+const params = new URLSearchParams(window.location.search)
+
+var get_num = params.get('num')
+if(get_num ==null){
+get_num = 100
+window.location.href = "?num="+get_num
+}
+
+
+function yt(num){
+
+        for (i = 2; i<num; i++){
+  var  divide = (num/i)
+  var no_dot = Math.floor(divide)
+      if(divide == no_dot){
+          console.log("not prime number "+num+" is can divide by "+divide)
+                        document.write("<h1 style='font-size:50px;'>"+num+" is not  prime number, it can divide by "+divide+"</h1>")
+          return
+      } else if(i == num-1){
+           console.log(num+" is prime number"+" it can't be divide without 1 & itself ("+num+") ")
+ document.write("<h1 style='font-size:50px;'>"+num+" is prime number"+" it can't be divide without 1 & itself ('"+num+"') </h1>")}}}
+
+yt(get_num)
+
+var lastDigit = (get_num%10)+1
+
+function increase(){
+window.location.href = "?num="+get_num+""+lastDigit
+}
+
+</script>
+
+<button style='font-size:70px;' onclick="increase()">Increase One</button>
