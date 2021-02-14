@@ -76,7 +76,7 @@ color: blue;
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  color: red;
+  color: blacl;
 }
 .odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
   -webkit-transition: -webkit-transform 0.5s;
@@ -90,7 +90,7 @@ color: blue;
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
-  color: black;
+  color: red;
 }
 
 .odometer.odometer-auto-theme, .odometer.odometer-theme-default {
