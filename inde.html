@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World It's Munny Reol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="bg-blue-500 shadow-xl shadow-slate-200 h-14 md:flex md:justify-between text-white">
+        <div class="flex space-x-2 px-3 items-center h-full justify-between">
+            <a class="flex space-x-2 items-center w-44" href="/">
+                <img class="w-8 rounded-2xl	" src="/assets/image/munnyreol.png" />
+                <div class="font-semibold text-xl">@munnyreol</div>
+            </a>
+
+            <div class="md:hidden cursor-pointer w-10" onclick="navMenu(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" stroke="currentcolor" viewBox="0 0 512 512">
+                    <path fill="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48"
+                        d="M88 152h336M88 256h336M88 360h336">
+                    </path>
+                </svg>
+            </div>
+        </div>
+
+        <ul class="md:flex md:items-center md:justify-between md:mr-10 bg-blue-500 md:space-x-5 md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 delay-75"
+            id="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        var menuOpen = false
+        function navMenu(e) {
+            let list = document.getElementById("nav-list");
+
+            var openMenu = `
+            <svg xmlns="http://www.w3.org/2000/svg" stroke="currentcolor" viewBox="0 0 512 512">
+                <path 
+                fill="white"
+                stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336">
+                </path>
+            </svg>`
+
+            var closeMenu = `
+            <svg xmlns="http://www.w3.org/2000/svg" stroke="currentcolor" viewBox="0 0 512 512">
+                <path
+                fill="white"
+                d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z">
+                </path>
+            </svg>`
+            menuOpen = !menuOpen
+            menuOpen ? (e.innerHTML = closeMenu, list.classList.add('opacity-100')) : (e.innerHTML = openMenu, list.classList.remove('opacity-100'))
+        }
+    </script>
+</body>
+
+</html>
